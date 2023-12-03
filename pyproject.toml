@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "cscdg"
+version = "0.0.3"
+authors = ["Greateapot <greateapot998@gmail.com>"]
+description = 'C# Class Diagram Generator'
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Greateapot/cdg"
+repository = "https://github.com/Greateapot/cdg"
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Typing :: Typed",
+]
+packages = [{ include = "cscdg", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.scripts]
+cscdg = "cscdg.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools", "wheel"]
+build-backend = "poetry.core.masonry.api"
