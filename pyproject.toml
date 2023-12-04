@@ -5,8 +5,8 @@ authors = ["Greateapot <greateapot998@gmail.com>"]
 description = 'C# Class Diagram Generator'
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/Greateapot/cscdg"
-repository = "https://github.com/Greateapot/cscdg"
+homepage = "https://github.com/Greateapot/csharp-class-diagram-generator"
+repository = "https://github.com/Greateapot/csharp-class-diagram-generator"
 classifiers = [
     "Environment :: Console",
     "License :: OSI Approved :: MIT License",
