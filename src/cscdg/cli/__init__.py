@@ -5,7 +5,7 @@ from cscdg.models.project import Project
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Class Diagram Generator (cdg)")
+    parser = argparse.ArgumentParser(description="C# Class Diagram Generator (cscdg)")
     parser.add_argument(
         "path",
         help="path to .csproj dir",
