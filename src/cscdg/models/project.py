@@ -54,21 +54,21 @@ class Project(AbcModel, PrettyPrintMixin):
                 if cr.startswith("I") and len(cr) > 1 and cr[1].isupper():
                     relations.append(
                         Relation(
-                            from_name=clazz.name,
-                            to_name=cr,
+                            from_name=clazz.name.replace("<", "~").replace(">", "~"),
+                            to_name=cr.replace("<", "~").replace(">", "~"),
                             type=ClassRelationship.Realization,
                         )
                     )
                     if cr not in clazz_names:
                         clazz_names.append(cr)
                         mermaids.append(
-                            Class(cr, [], [], Annotation.Interface).to_mermaid()
+                            Class(cr.replace("<", "~").replace(">", "~"), [], [], Annotation.Interface).to_mermaid()
                         )
                 else:
                     relations.append(
                         Relation(
-                            from_name=cr,
-                            to_name=clazz.name,
+                            from_name=cr.replace("<", "~").replace(">", "~"),
+                            to_name=clazz.name.replace("<", "~").replace(">", "~"),
                             type=ClassRelationship.Inheritance,
                         )
                     )
